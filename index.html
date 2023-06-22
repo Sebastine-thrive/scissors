@@ -27,18 +27,19 @@
 
         <div class="navigation">
           <ul class="nav-links">
-            <li class="nav-link">My URLs</li>
+            <li class="nav-link"><a href="#url "> My URLs</a></li>
             <li class="nav-link">
-              Features <span class="drop-drown"> </span>
+              <a href="#features"> Features </a>
+              <span class="drop-drown"> </span>
               <img
                 src="./assets/dropdown-icon.svg"
                 alt=" dropdown icon"
                 class="dropdown-icon"
               />
             </li>
-            <li class="nav-link">Pricing</li>
-            <li class="nav-link">analytics</li>
-            <li class="nav-link">FAQs</li>
+            <li class="nav-link"><a href="#pricing"> Pricing</a></li>
+            <li class="nav-link"><a href="#analytics">analytics </a></li>
+            <li class="nav-link"><a href="#faq"> FAQs</a></li>
           </ul>
         </div>
 
@@ -53,7 +54,7 @@
     <!-- Hero Section start -->
 
     <section class="hero-section">
-      <div class="hero1">
+      <div class="hero1 flex-col-center">
         <h1 class="heading">Optimise your online experience with our</h1>
         <h1>
           advanced
@@ -80,16 +81,19 @@
         </div>
 
         <div class="links-image">
-          <img
-            src="./assets/link-chain.svg"
-            alt="link-image"
-            class="link-chain"
-          />
+          <div class="chains flex-col">
+            <img src="./assets/chains-image.svg" alt="" />
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="one-stop">
+    <img
+      src="./assets/feather-background.svg"
+      alt="feather-background"
+      class="feather-background"
+    />
+    <section class="one-stop" id="analytics">
       <div class="heading">
         <h1 class="title">
           One Stop. <br />Four <span class="blue"> Possibilities</span>
@@ -116,7 +120,7 @@
       </div>
     </section>
 
-    <section class="features">
+    <section class="features" id="features">
       <div class="heading">
         <h1 class="title">
           Why choose
@@ -132,7 +136,7 @@
       </div>
       <div class="points-container">
         <div class="points">
-          <img src="" alt="" />
+          <img src="./assets/link-2.svg" alt="link" />
           <h2>URL shortening</h2>
           <p>
             Scissors allows you to shorten URLs of your business, events.
@@ -141,7 +145,7 @@
         </div>
 
         <div class="points">
-          <img src="" alt="" />
+          <img src="./assets/edit.svg" alt="" />
           <h2>Custom URLs</h2>
           <p>
             With Scissors, you can create custom URLs, with the length you want.
@@ -150,7 +154,7 @@
         </div>
 
         <div class="points">
-          <img src="" alt="" />
+          <img src="./assets/grid.svg" alt="" />
           <h2>QR Codes</h2>
           <p>
             Generate QR codes to your business and events. Bring your customers
@@ -159,7 +163,7 @@
         </div>
 
         <div class="points">
-          <img src="" alt="" />
+          <img src="./assets/activity.svg" alt="" />
           <h2>Data Analytics</h2>
           <p>
             Receive data on the usage of either your shortened URls, custom URLs
@@ -169,10 +173,9 @@
       </div>
     </section>
 
-    <section class="pricing">
+    <section class="pricing" id="pricing">
       <div class="pricing-container">
         <div class="heading">
-          <img src="" alt="" />
           <h1>A <span class="blue">Price Perfect</span> for your needs.</h1>
         </div>
 
@@ -231,17 +234,28 @@
       </div>
     </section>
 
-    <section class="analytics">
+    <section class="analytics flex-row-center" id="url">
       <div class="analytics-form-container">
         <form action="">
           <input type="text" placeholder="Paste URL here..." class="url" />
 
-          <input type="text" placeholder="Choose domain" class="domain" />
+          <button class="domain flex-row">
+            <p>Choose Domain</p>
+            <img
+              src="./assets/dropdown-blue.svg"
+              alt=""
+              class="domain-dropdown"
+            />
+          </button>
 
           <input type="text" placeholder="Type alias here" class="url-alias" />
           <button class="btn btn-darkblue trim-url">
             <p>Trim Url</p>
-            <img src="" alt="trim-icon" class="trim-icon" />
+            <img
+              src="./assets/magic wand.svg"
+              alt="trim-icon"
+              class="trim-icon"
+            />
           </button>
 
           <p class="agreement">
@@ -253,84 +267,113 @@
           </p>
         </form>
       </div>
+
+      <img
+        class="analytics-left-svg"
+        src="./assets/analytics-svg-left.svg"
+        alt="image"
+      />
+
+      <img
+        class="analytics-right-svg"
+        src="./assets/analytic-svg-right.svg"
+        alt="image"
+      />
     </section>
 
-    <section class="faq">
+    <section class="faq" id="faq">
       <h1 class="title">FAQs</h1>
       <div class="faq-wrapper">
         <div class="accordion-item">
           <div class="accordion-title">
-            How does URL shortening work?
-            <span class="icon">&#9660; </span>
+            <h4>How does URL shortening work?</h4>
+            <img src="./assets/minus.svg" alt="plus icon" />
           </div>
+
           <div class="accordion-content">
-            URL shortening works by taking a long URL and creating a shorter,
-            condensed version that redirects to the original URL. When a user
-            clicks on the shortened link, they are redirected to the intended
-            destination.
+            <p>
+              URL shortening works by taking a long URL and creating a shorter,
+              condensed version that redirects to the original URL. When a user
+              clicks on the shortened link, they are redirected to the intended
+              destination.
+            </p>
           </div>
         </div>
 
         <div class="accordion-item">
           <div class="accordion-title">
-            Is it necessary to create an account to use the URL shortening
-            service?
-            <span class="icon">&#9660; </span>
+            <h4>
+              Is it necessary to create an account to use the URL shortening
+              service?
+            </h4>
+            <img src="./assets/plus.svg" alt="plus icon" />
           </div>
         </div>
 
         <div class="accordion-item">
           <div class="accordion-title">
-            Are the shortened links permanaent? Do they expire?
-            <span class="icon">&#9660; </span>
+            <h4>Are the shortened links permanaent? Do they expire?</h4>
+            <img src="./assets/plus.svg" alt="plus icon" />
           </div>
         </div>
 
         <div class="accordion-item">
           <div class="accordion-title">
-            Are there any limitations to the number of URLs I can shorten?
-            <span class="icon">&#9660; </span>
+            <h4>
+              Are there any limitations to the number of URLs I can shorten?
+            </h4>
+            <img src="./assets/plus.svg" alt="plus icon" />
           </div>
         </div>
 
         <div class="accordion-item">
           <div class="accordion-title">
-            Can i customise the shortened URLs to reflect5 my brand or content?
-            <span class="icon">&#9660; </span>
+            <h4>
+              Can i customise the shortened URLs to reflect5 my brand or
+              content?
+            </h4>
+
+            <img src="./assets/plus.svg" alt="plus icon" />
           </div>
         </div>
 
         <div class="accordion-item">
           <div class="accordion-title">
-            Can i track the performance of my shortened URLs?
-            <span class="icon">&#9660; </span>
+            <h4>Can i track the performance of my shortened URLs?</h4>
+            <img src="./assets/plus.svg" alt="plus icon" />
           </div>
         </div>
 
         <div class="accordion-item">
           <div class="accordion-title">
-            How secure is the URL shortening service? Are the shortened links
-            protected against spam or malicious activity?
-            <span class="icon">&#9660; </span>
+            <h4>
+              How secure is the URL shortening service? Are the shortened links
+              protected against spam or malicious activity?
+            </h4>
+            <img src="./assets/plus.svg" alt="plus icon" />
           </div>
         </div>
 
         <div class="accordion-item">
           <div class="accordion-title">
-            What is QR code and what can I do with it?
-            <span class="icon">&#9660; </span>
+            <h4>What is QR code and what can I do with it?</h4>
+            <img src="./assets/plus.svg" alt="plus icon" />
           </div>
         </div>
 
         <div class="accordion-item">
           <div class="accordion-title">
-            Are there any limitations to the number of URLs I can shorten? Is
-            there an API available for integrating the URL shortening service to
-            my own applications and websites?
-            <span class="accordion-icon">&#9660; </span>
+            <h4>
+              Are there any limitations to the number of URLs I can shorten? Is
+              there an API available for integrating the URL shortening service
+              to my own applications and websites?
+            </h4>
+            <img src="./assets/plus.svg" alt="plus icon" />
           </div>
         </div>
       </div>
+      <img class="faq-right-svg" src="./assets/faq-right-svg.svg" alt="image" />
+      <img class="faq-left-svg" src="./assets/faq-left-svg.svg" alt="image" />
     </section>
 
     <section class="revolutionalise flex-row-center">

@@ -26,6 +26,10 @@ Global Styles
   /* transition: all 0.5s ease-in-out; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100vw;
 }
@@ -174,6 +178,7 @@ a {
 }
 
 .navigation ul li {
+  cursor: pointer;
   margin: 0 0.5rem;
 }
 
@@ -251,14 +256,54 @@ a {
 
 .hero-section .hero1 .links-image {
   margin: 3rem 0;
+  position: relative;
+}
+/* 
+.link-chain {
+  background-image: url("../assets/linked-chains-svg.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+} */
+
+.links-image .chains img {
+  width: 60%;
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.one-stop,
+.chains {
+  text-align: center;
+  display: flex;
+  justify-self: center;
+  width: 768px;
+  height: 224px;
+  background-color: rgba(254, 254, 254, 0.1);
+  border: 1px solid #005ae2;
+  border-radius: 24px;
+
+  background-image: url("../assets/linked-chains-svg.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+/* 
+.link-chain-svg {
+  position: absolute;
+  top: 0;
+  left: 20%;
+} */
+
+.one-stop {
+  background-color: #f9fbfd;
+  margin-top: -0.5rem;
+  padding: 5rem;
+  display: flex;
+  color: var(--black);
+}
+
 .features {
-  width: 100vw;
   margin: 2rem 5rem;
   padding: 3rem 0;
-  /* width: 100%; */
   display: flex;
   color: var(--black);
 }
@@ -290,6 +335,13 @@ a {
   width: 20%;
 }
 
+.features .heading .title {
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #112232 0%, #4d6b88 100%) 1;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
 .features .heading p {
   width: 100%;
   line-height: 25px;
@@ -299,7 +351,18 @@ a {
   width: 55%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
+  grid-gap: 40px;
+}
+
+.features .points-container .points img {
+  padding: 20px;
+  background-color: rgba(50, 132, 255, 0.5);
+
+  border-radius: 50%;
+}
+
+.features .points-container .points h2 {
+  margin: 20px 0;
 }
 
 .pricing {
@@ -316,9 +379,11 @@ a {
   align-items: center;
 }
 
-.pricing .heaading {
-  width: 35%;
-  display: flex;
+.pricing .pricing-container .heading h1 {
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #112232 0%, #4d6b88 100%) 1;
+  padding-left: 10px;
+  margin-bottom: 20px;
 }
 
 .pricing .content {
@@ -333,7 +398,19 @@ a {
   color: var(--black);
 }
 
-.pricing .cards > div {
+.cards .basic ul,
+.cards .professional ul,
+.cards .teams ul {
+  list-style-position: inside;
+}
+
+.cards .basic ul li,
+.cards .professional ul li,
+.cards .teams ul li {
+  list-style-image: url("../assets/check-circle.svg");
+}
+
+.pricing .cards  div {
   border: 2px solid var(--lightBlue);
   border-radius: 8px;
   padding: 2rem 3.5rem;
@@ -342,11 +419,14 @@ a {
   min-width: 379px;
 }
 
-.pricing .cards > div:hover {
+.pricing .cards .basic:hover {
   color: var(--white);
   border-radius: 8px;
   background: linear-gradient(to right, #1e3448 0%, #1e3448 100%);
   border: none;
+  transform: translateZ(1px);
+  height: 627px;
+  width: 410px;
 }
 
 .pricing .cards > :nth-child(2),
@@ -381,9 +461,22 @@ a {
 }
 
 .analytics {
-  min-width: 100%;
+  position: relative;
   height: 500px;
   margin: 3rem 0;
+  background: linear-gradient(to bottom, #1e3448 0%, #1e3448 100%);
+}
+
+.analytics-left-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.analytics-right-svg {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .analytics-form-container {
@@ -401,14 +494,14 @@ a {
   justify-content: center;
   gap: 6px;
   background-color: var(--white);
-  border: 2px solid var(--lightBlue);
+  border-radius: 12px;
   padding: 20px;
 }
 
 .analytics-form-container form input {
   background-color: var(--white);
   color: var(--lightBlue);
-  border: 2px solid var(--lightBlue);
+  border: 1px solid var(--lightBlue);
   border-radius: 5px;
   /* flex: 1 0 130px; */
   height: 3rem;
@@ -421,16 +514,34 @@ a {
   width: 420px;
 }
 .domain {
+  background-color: var(--white);
+  color: var(--lightBlue);
+  border: 1px solid var(--lightBlue);
   width: 220px;
+  height: 3rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 5px;
+  margin: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.domain img {
+  cursor: pointer;
+  margin-left: 10px;
+}
+.domain-dropdown {
+  cursor: pointer;
 }
 
 .trim-url {
-  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 10px;
+  cursor: pointer;
 }
 
 .trim-url p {
@@ -452,6 +563,7 @@ input::placeholder {
 }
 
 .faq {
+  position: relative;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -459,7 +571,26 @@ input::placeholder {
   align-items: center;
   text-align: center;
   margin-top: 10px;
-  margin-bottom: 70px;
+  padding-bottom: 70px;
+}
+
+.faq .title {
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #112232 0%, #4d6b88 100%) 1;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.faq-left-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.faq-right-svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .faq-wrapper {
@@ -476,12 +607,15 @@ input::placeholder {
 }
 
 .accordion-title {
-  /*8width: 80%; */
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
   margin-right: 0;
   padding-right: 0;
+}
+
+.accordion-title img {
+  margin-left: 20px;
 }
 
 .accordion-icon {
@@ -492,7 +626,7 @@ input::placeholder {
   background: linear-gradient(to bottom, #1e3448 0%, #1e3448 100%);
   min-height: 400px;
   position: relative;
-  margin-top: 30px;
+  /* padding-top: 30px; */
 }
 
 .revolutionalise-left-svg {
@@ -523,7 +657,6 @@ input::placeholder {
   margin-top: 5rem;
   padding-left: 5rem;
   margin-bottom: 0;
-  /* padding-top:5rem; */
   background-image: url("../assets/footer-left-svg.svg");
   background-repeat: no-repeat;
 }
