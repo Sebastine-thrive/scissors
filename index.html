@@ -14,16 +14,18 @@
     <!-- Navbar start -->
     <nav class="navbar">
       <div class="nav-container">
-        <div class="logo">
-          <div class="logo-icon">
-            <img
-              src="./assets/logo-link-slanted.svg"
-              alt=" brand-logo"
-              class="brand-logo"
-            />
+        <a href="">
+          <div class="logo">
+            <div class="logo-icon">
+              <img
+                src="./assets/logo-link-slanted.svg"
+                alt=" brand-logo"
+                class="brand-logo"
+              />
+            </div>
+            <p class="brand">scissor</p>
           </div>
-          <p class="brand">scissor</p>
-        </div>
+        </a>
 
         <div class="navigation">
           <ul class="nav-links">
@@ -55,7 +57,7 @@
 
     <section class="hero-section">
       <div class="hero1 flex-col-center">
-        <h1 class="heading">Optimise your online experience with our</h1>
+        <h1 class="heading ">Optimise your online experience with our</h1>
         <h1>
           advanced
           <span class="blue-heading"
@@ -75,14 +77,24 @@
           branded links and domain customisation options to reinforce your brand
           presence and enhance user engagement
         </p>
-        <div class="personalise-buttons">
+        <div class="personalise-buttons flex-row-center">
           <button class="btn btn-blue">sign Up</button>
           <a href=""><p class="learn-more">Learn More</p></a>
         </div>
 
-        <div class="links-image">
+        <div class="links-image flex-row">
+          <img
+            src="./assets/linked-chains-svg.svg"
+            alt=""
+            class="linked-chains-background"
+          />
           <div class="chains flex-col">
-            <img src="./assets/chains-image.svg" alt="" />
+            <img src="./assets/chains-image.svg" alt="url linking image" />
+
+            <p>
+              Seamlessly transform your long URLs into concise <br />
+              and shareable links with just few clicks
+            </p>
           </div>
         </div>
       </div>
@@ -93,14 +105,14 @@
       alt="feather-background"
       class="feather-background"
     />
-    <section class="one-stop" id="analytics">
+    <section class="analytic flex-row" id="analytics">
       <div class="heading">
         <h1 class="title">
           One Stop. <br />Four <span class="blue"> Possibilities</span>
         </h1>
       </div>
 
-      <div class="point-container">
+      <div class="point-container ">
         <div class="points">
           <h2 class="title">3M</h2>
           <p class="content">Active Users</p>
@@ -120,7 +132,10 @@
       </div>
     </section>
 
-    <section class="features" id="features">
+
+    <!-- Features -->
+
+    <section class="features " id="features">
       <div class="heading">
         <h1 class="title">
           Why choose
@@ -173,8 +188,8 @@
       </div>
     </section>
 
-    <section class="pricing" id="pricing">
-      <div class="pricing-container">
+    <section class="pricing flex-row-center" id="pricing">
+      <div class="pricing-container flex-col-center">
         <div class="heading">
           <h1>A <span class="blue">Price Perfect</span> for your needs.</h1>
         </div>
@@ -185,7 +200,7 @@
         </p>
 
         <div class="cards">
-          <div class="basic">
+          <div class="card basic">
             <h4>Basic</h4>
             <h2>Free</h2>
             <p>Free Plan for all users</p>
@@ -198,7 +213,7 @@
             </ul>
           </div>
 
-          <div class="professional">
+          <div class="card professional">
             <h4>Professional</h4>
             <h2>$15/month</h2>
             <p>Ideal for business creations</p>
@@ -211,7 +226,7 @@
             </ul>
           </div>
 
-          <div class="teams">
+          <div class="card teams">
             <h4>Teams</h4>
             <h2>$25/month</h2>
             <p>Share with up to 10 users</p>
@@ -234,22 +249,29 @@
       </div>
     </section>
 
-    <section class="analytics flex-row-center" id="url">
+    <div class="analytics flex-row-center" id="url">
       <div class="analytics-form-container">
         <form action="">
-          <input type="text" placeholder="Paste URL here..." class="url" />
+          <input
+            type="text"
+            placeholder="Paste URL here..."
+            class="url"
+            name="oldUrl"
+          />
 
-          <button class="domain flex-row">
-            <p>Choose Domain</p>
-            <img
-              src="./assets/dropdown-blue.svg"
-              alt=""
-              class="domain-dropdown"
-            />
-          </button>
+          <select class="domain">
+            <option value="option1" selected>Choose Domain</option>
+            <option value="option2">Option 1</option>
+            <option value="option3">Option 2</option>
+          </select>
 
-          <input type="text" placeholder="Type alias here" class="url-alias" />
-          <button class="btn btn-darkblue trim-url">
+          <input
+            type="text"
+            placeholder="Type alias here"
+            class="url-alias"
+            name="newUrl"
+          />
+          <button class="btn btn-darkblue trim-url flex-row-center">
             <p>Trim Url</p>
             <img
               src="./assets/magic wand.svg"
@@ -279,9 +301,9 @@
         src="./assets/analytic-svg-right.svg"
         alt="image"
       />
-    </section>
+    </div>
 
-    <section class="faq" id="faq">
+    <section class="faq flex-col-center" id="faq">
       <h1 class="title">FAQs</h1>
       <div class="faq-wrapper">
         <div class="accordion-item">
@@ -357,17 +379,6 @@
         <div class="accordion-item">
           <div class="accordion-title">
             <h4>What is QR code and what can I do with it?</h4>
-            <img src="./assets/plus.svg" alt="plus icon" />
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <div class="accordion-title">
-            <h4>
-              Are there any limitations to the number of URLs I can shorten? Is
-              there an API available for integrating the URL shortening service
-              to my own applications and websites?
-            </h4>
             <img src="./assets/plus.svg" alt="plus icon" />
           </div>
         </div>
