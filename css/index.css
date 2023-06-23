@@ -121,6 +121,7 @@ a {
 .btn-white {
   color: var(--darkerBlue);
   background-color: var(--white);
+  border: 1px solid var(--darkerBlue);
 }
 
 .btn-white:hover {
@@ -190,6 +191,11 @@ a {
   display: flex;
   align-items: center;
 }
+
+.nav-actions p {
+  font-size: 18px;
+}
+
 .navbar .nav-container .nav-actions .try {
   margin-right: 1.5rem;
   font-size: 16px;
@@ -279,18 +285,22 @@ a {
   position: relative;
 }
 
-/* .analytics */
-
+/* 
+Features */
 .analytic {
   background-color: #f9fbfd;
   margin-top: -0.5rem;
-  padding: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: calc(5rem + 12px);
   display: flex;
   color: var(--black);
 }
 
 .features {
-  margin: 2rem 5rem;
+  margin-left: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   padding: 3rem 0;
   display: flex;
   color: var(--black);
@@ -298,9 +308,20 @@ a {
 
 .analytic .heading,
 .features .heading {
-  width: 20%;
-  margin-right: 5rem;
+  width: 30%;
+  margin-right: 6rem;
   line-height: 40px;
+}
+
+.analytic .heading h1,
+.features .heading h1 {
+  font-size: 30px;
+}
+
+.features .heading p {
+  padding-left: 15px;
+  font-size: 18px;
+  width: 100%;
 }
 
 .blue {
@@ -317,20 +338,11 @@ a {
   margin-bottom: 0.5rem;
 }
 
-.features .heading {
-  width: 20%;
-}
-
 .features .heading .title {
   border-left: 5px solid;
   border-image: linear-gradient(to bottom, #112232 0%, #4d6b88 100%) 1;
   padding-left: 10px;
   margin-bottom: 20px;
-}
-
-.features .heading p {
-  width: 100%;
-  line-height: 25px;
 }
 
 .features .points-container {
@@ -351,6 +363,7 @@ a {
   margin: 20px 0;
 }
 
+/* Pricing */
 .pricing {
   margin: 3rem 5rem;
 }
@@ -358,69 +371,73 @@ a {
 .pricing .pricing-container .heading h1 {
   border-left: 5px solid;
   border-image: linear-gradient(to bottom, #112232 0%, #4d6b88 100%) 1;
+  font-size: 40px;
   padding-left: 10px;
   margin-bottom: 20px;
 }
 
 .pricing .content {
-  width: 35%;
   text-align: center;
+  font-size: 18px;
 }
 
-.pricing .cards {
+.cards {
   display: flex;
   margin-top: 5rem;
   color: var(--black);
+  height: auto;
+  align-items: center;
 }
 
-.cards .basic ul,
-.cards .professional ul,
-.cards .teams ul {
+.cards .card ul {
   list-style-position: inside;
 }
 
-.cards .basic ul li,
-.cards .professional ul li,
-.cards .teams ul li {
+.cards .card ul li {
   list-style-image: url("../assets/check-circle.svg");
+  margin-bottom: 6px;
 }
 
-.pricing .cards .card {
+.card {
   border: 2px solid var(--lightBlue);
-  border-radius: 8px;
   padding: 2rem 3.5rem;
   display: flex;
   flex-direction: column;
   width: 379px;
-  max-width: 379px;
+  height: 455px;
 }
 
-.pricing .cards .card:hover {
+.basic {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.teams {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card:hover {
   color: var(--white);
   border-radius: 8px;
   background: linear-gradient(to right, #1e3448 0%, #1e3448 100%);
   border: none;
-  transform: translateZ(1px);
   height: 627px;
   width: 410px;
+  z-index: 2;
 }
 
-.pricing .cards > :nth-child(2),
-.pricing .cards > :nth-child(3) {
-  margin-left: 2rem;
-}
-
-.pricing .cards > div h4 {
+.cards .card h4 {
   font-size: 24px;
 }
 
-.pricing .cards > div h2 {
+.cards .card h2 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   font-size: 40px;
 }
 
-.pricing .cards > div p {
+.pricing .cards .card p {
   font-size: 20px;
   margin-bottom: 1rem;
 }
@@ -429,12 +446,15 @@ a {
   padding: 0.5rem 0;
 }
 .pricing-action-buttons {
-  margin: 3rem 0;
+  margin: 3rem;
 }
 
 .custom-pricing {
   font-size: 14px;
+  margin-right: 15px;
 }
+
+/* analytics */
 
 .analytics {
   position: relative;
@@ -538,6 +558,7 @@ a {
   opacity: 1;
 }
 
+/* FAQS */
 .faq {
   position: relative;
   text-align: center;
@@ -622,13 +643,13 @@ a {
   margin-bottom: 10px;
 }
 
+/* Footer */
 .footer {
   width: 100vw;
-  max-width: 100vw;
   position: relative;
-  margin-top: 5rem;
-  padding-left: 5rem;
-  padding-right: 1.5rem;
+  margin-top: 10rem;
+  padding-left: 10rem;
+  padding-right: 3rem;
   margin-bottom: 0;
   background-image: url("../assets/footer-left-svg.svg");
   background-repeat: no-repeat;
@@ -642,6 +663,7 @@ a {
 
 .footer-container {
   width: 100%;
+  margin-left: 2rem;
   align-items: center;
 }
 
@@ -663,13 +685,12 @@ a {
   display: flex;
   align-items: center;
   align-items: start;
-  /* justify-items: center; */
 }
 
 .footer-page-links-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
+  gap: 2rem;
 
   margin-left: 50px;
 }
