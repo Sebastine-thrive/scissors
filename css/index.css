@@ -49,7 +49,7 @@ ul {
 }
 
 p {
-  font-family: "Gilroy Medium" sans-serif;
+  font-family: "Gilroy Medium", sans-serif;
 }
 
 a {
@@ -60,28 +60,6 @@ a {
 
 .dark {
   color: var(--black);
-}
-
-.flex-row {
-  display: flex;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-col-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-row-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .btn {
@@ -210,6 +188,10 @@ a {
 }
 
 .hero-section .hero1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 100%;
 }
@@ -237,7 +219,6 @@ a {
 }
 
 .hero-section .hero1 .personalise {
-  font-family: "Gilroy-Medium" sans-serif;
   text-align: center;
   line-height: 28px;
   font-size: 20px;
@@ -245,6 +226,9 @@ a {
 }
 
 .hero-section .hero1 .personalise-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1.5rem 0;
 }
 
@@ -254,19 +238,20 @@ a {
 }
 
 .hero-section .hero1 .links-image {
+  display: flex;
   margin: 3rem 0;
 }
 
 .links-image .chains {
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-self: center;
   width: 768px;
   height: 224px;
   background-color: rgba(254, 254, 254, 0.1);
   border: 1px solid #005ae2;
   border-radius: 24px;
-
   background: linear-gradient(to right, rgba(0, 90, 226, 0.1), #fefefe);
   background-color: #fff;
   margin-top: 1rem;
@@ -286,15 +271,19 @@ a {
   position: relative;
 }
 
-/* 
-Features */
+.feather-background {
+  display: block;
+  margin: auto;
+}
+
+/* Analytics and Features */
 .analytic {
+  display: flex;
   background-color: #f9fbfd;
   margin-top: -0.5rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
   padding-left: calc(5rem + 12px);
-  display: flex;
   color: var(--black);
 }
 
@@ -356,7 +345,6 @@ Features */
 .features .points-container .points img {
   padding: 20px;
   background-color: rgba(50, 132, 255, 0.2);
-
   border-radius: 50%;
 }
 
@@ -367,6 +355,16 @@ Features */
 /* Pricing */
 .pricing {
   margin: 3rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .pricing .pricing-container .heading h1 {
@@ -417,6 +415,10 @@ Features */
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+.professional {
+  border-left: none;
+  border-right: none;
+}
 
 .card:hover {
   color: var(--white);
@@ -424,8 +426,12 @@ Features */
   background: linear-gradient(to right, #1e3448 0%, #1e3448 100%);
   border: none;
   height: 627px;
-  width: 410px;
+  width: 420px;
   z-index: 2;
+}
+
+.card:hover ul li {
+  margin: 0.7rem 0;
 }
 
 .cards .card h4 {
@@ -446,6 +452,7 @@ Features */
 .pricing-points li {
   padding: 0.5rem 0;
 }
+
 .pricing-action-buttons {
   margin: 3rem;
 }
@@ -457,32 +464,35 @@ Features */
 
 /* analytics */
 
-.analytics {
+.trim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   height: 500px;
   margin: 3rem 0;
   background: linear-gradient(to bottom, #1e3448 0%, #1e3448 100%);
 }
 
-.analytics-left-svg {
+.trimurl-left-svg {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.analytics-right-svg {
+.trimurl-right-svg {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.analytics-form-container {
+.trim-form-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.analytics-form-container form {
+.trim-form-container form {
   z-index: 5;
   max-width: 500px;
   background-color: var(--white);
@@ -496,7 +506,7 @@ Features */
   padding: 20px;
 }
 
-.analytics-form-container form input {
+.trim-form-container form input {
   background-color: var(--white);
   color: var(--lightBlue);
   border: 1px solid var(--lightBlue);
@@ -507,7 +517,7 @@ Features */
   padding: 8px;
 }
 
-.analytics-form-container form input:focus {
+.trim-form-container form input:focus {
   border: 1px solid var(--black);
 }
 
@@ -532,6 +542,7 @@ Features */
 .trim-url {
   padding: 10px;
   cursor: pointer;
+  display: flex;
 }
 
 .trim-url p {
@@ -547,13 +558,13 @@ Features */
   font-weight: bold;
 }
 
-.analytics .analytics-form-container input::placeholder {
+.trim .trim-form-container input::placeholder {
   color: var(--lightBlue);
   padding-left: 8px;
   transition: 2s;
 }
 
-.analytics .analytics-form-container input:focus::placeholder {
+.trim .trim-form-container input:focus::placeholder {
   transform: translate(0, -100%);
   font-size: 0.8em;
   opacity: 1;
@@ -566,6 +577,10 @@ Features */
   margin-top: 10px;
   overflow-y: hidden;
   padding-bottom: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .faq .title {
@@ -620,6 +635,16 @@ Features */
   background: linear-gradient(to bottom, #1e3448 0%, #1e3448 100%);
   min-height: 400px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.revolutionalise-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .revolutionalise-left-svg {
@@ -668,7 +693,13 @@ Features */
   align-items: center;
 }
 
+.logo-and-socials {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-logo-icon {
+  display: flex;
   align-items: center;
 }
 
@@ -692,13 +723,14 @@ Features */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-
   margin-left: 50px;
 }
 
 .socials {
+  display: flex;
   margin-top: 30px;
 }
+
 .socials img {
   width: 30px;
   height: 20px;
@@ -734,4 +766,331 @@ Features */
 }
 .footer-note .brand-and-year {
   margin-left: 20px;
+}
+
+@media (min-width: 1301px) {
+  .footer-page-links {
+    margin-left: 3rem;
+    text-align: center;
+  }
+
+  .footer-note {
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 1300px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 769px) {
+  .navbar {
+    margin: 10px 2rem;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .hero-section .hero1 h1 {
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  .blue-heading .brush-underline {
+    margin-top: -1rem;
+    width: 50%;
+  }
+
+  .links-image .chains {
+    width: 600px;
+  }
+
+  .feather-background {
+    width: 700px;
+  }
+
+  .analytic,
+  .features {
+    padding: 2rem 0.5rem;
+    margin: 0 2rem;
+  }
+
+  .analytic .heading,
+  .features .heading {
+    width: 30%;
+  }
+
+  .analytic .heading h1,
+  .features .heading h1 {
+    font-size: 25px;
+  }
+
+  .analytic .point-container {
+    width: 75%;
+  }
+
+  .features .points-container {
+    width: 75%;
+    grid-gap: 20px;
+  }
+
+  .features .heading p {
+    line-height: 22px;
+    word-spacing: 5px;
+    text-align: start;
+    padding-left: 0;
+  }
+
+  .analytic .point-container .points,
+  .features .points-container .points {
+    line-height: 26px;
+    overflow-y: hidden;
+  }
+
+  .pricing {
+    margin: 2rem;
+  }
+
+  .pricing .pricing-container .content {
+    line-height: 22px;
+  }
+
+  .cards {
+    overflow-x: auto;
+  }
+
+  .card {
+    width: 400px;
+  }
+
+  .card:hover {
+    height: 500px;
+    width: 420px;
+  }
+
+  .faq {
+    max-width: 100vw;
+  }
+
+  .faq-wrapper {
+    width: 600px;
+  }
+
+  .footer {
+    margin-top: 5rem;
+    padding: 1rem;
+  }
+
+  .footer-container {
+    margin-left: 0;
+  }
+
+  .footer-page-links-wrapper {
+    margin-left: 0;
+  }
+
+  .footer-page-links-wrapper {
+    display: grid;
+    gap: 0.1rem;
+  }
+
+  .footer-brand {
+    font-size: 13px;
+    margin-left: -5px;
+  }
+
+  .socials img {
+    width: 25px;
+    height: 20px;
+  }
+
+  .footer-note {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 541px) {
+  .navbar {
+    margin: 0.5rem 1rem;
+  }
+  .nav-actions {
+    margin-left: 3rem;
+  }
+  .nav-actions button {
+    margin-left: 0.3rem;
+  }
+
+  .nav-actions p {
+    font-size: 17px;
+  }
+
+  .hero-section {
+    max-width: 100vw;
+    margin: 2rem 1rem;
+  }
+
+  .hero-section .hero1 h1 {
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  .blue-heading .brush-underline {
+    margin-top: -0.5rem;
+    width: 50%;
+  }
+
+  .hero-section .hero1 .personalise {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  .links-image {
+    width: 480px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .links-image .chains {
+    width: 400px;
+  }
+
+  .feather-background {
+    width: 400px;
+  }
+
+  .analytic {
+    display: flex;
+    flex-direction: column;
+  }
+  .analytic .heading {
+    width: 100%;
+  }
+
+  .analytic .heading h1 {
+    font-size: 27px;
+  }
+
+  .analytic .point-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.8rem;
+  }
+
+  .analytic .point-container .points {
+    padding: 0.5rem 0;
+    margin-top: 0.8rem;
+  }
+
+  .features {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features .heading {
+    width: 100%;
+  }
+
+  .features .heading p {
+    padding-left: 0;
+    line-height: 28px;
+  }
+
+  .features .points-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features .points-container .points {
+    margin: 1rem 0;
+    line-height: 28px;
+    overflow-y: hidden;
+  }
+
+  .features .points-container .points h2 {
+    margin: 5px 0;
+  }
+
+  .pricing {
+    margin: 2rem 5rem;
+  }
+
+  .pricing .pricing-container .heading h1 {
+    font-size: 27px;
+  }
+
+  .pricing .pricing-container .content {
+    font-size: 17px;
+    text-align: start;
+    line-height: 28px;
+    overflow: hidden;
+  }
+
+  .cards {
+    overflow-x: auto;
+  }
+
+  .card {
+    width: 350px;
+  }
+
+  .card:hover {
+    height: 500px;
+    width: 380px;
+  }
+
+  .pricing-action-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .pricing-action-buttons button:nth-child(2) {
+    margin-top: 1.5rem;
+  }
+
+  .faq-wrapper {
+    width: 400px;
+  }
+
+  .footer {
+    padding: 0 0.5rem;
+  }
+
+  .footer-container {
+    margin-left: 0;
+  }
+
+  .footer-page-links-wrapper {
+    margin-left: 0;
+  }
+
+  .socials img {
+    width: auto;
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .footer-page-links-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-left: 1.5rem;
+  }
+}
+
+@media (max-width: 415px) {
+}
+
+@media (max-width: 376px) {
+}
+
+@media (max-width: 281px) {
 }
